@@ -1,6 +1,6 @@
 # go-react-boilerplate
 
-A boilerplate for API driven web applications with a react.js front-end
+A boilerplate for API driven single-page web applications with a react.js front-end
 
 # Installation
 
@@ -29,6 +29,7 @@ go build .
 ./myproject
 ```
 
+
 # Development
 
 It's pretty straightforward. Mess around with the client/src/app.js, client/styles/app.css, and with config.go, config.toml, and server/server.go, server/routes/*
@@ -39,6 +40,8 @@ GET http://localhost:4001/apps
 ```
  will hit up the golang api provided
  
+The server api uses http://github.com/ant0ine/go-json-rest/rest, which is a thin layer around the standard "net/http" to provide nice json API functionality, and also has some nice middlewares.
+
  # Contribute
  
  If you can pretty things up with your style of coding, please do so and pull request :)
