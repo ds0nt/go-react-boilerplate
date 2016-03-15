@@ -1,0 +1,26 @@
+{
+  "name": "ds0nt-es6-boilup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babelify": "^5.0.5",
+    "reactify": "^1.1.1",
+    "uglifyify": "^3.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.7.0",
+    "browser-cookies": "^1.0.8",
+    "clipboard": "^1.5.9",
+    "data-structures": "^1.4.2",
+    "events": "^1.1.0",
+    "notifyjs": "^1.2.8",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
+  }
+}
