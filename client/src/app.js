@@ -23,7 +23,7 @@ class App extends Component {
 
     return (
       <div>
-        <h1>Forky Admin</h1>
+        <h1>Golang React Boilerplate</h1>
         { JSON.stringify(this.state.apps) }
       </div>
     )
