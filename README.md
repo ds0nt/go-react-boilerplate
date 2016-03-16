@@ -42,7 +42,7 @@ go build
 ```
 
 
-# Client build steps
+### Client build steps
 
 ```bash
 cd client
@@ -56,9 +56,7 @@ npm install
 ```
 
 
-# Development 
-
-### This is a bunch of useless babble, you can just look at the code and it's pretty freaking obvious what does what.
+# Notes on how it works.
 
 Mess around with the client/src/app.js, client/styles/app.css, and with config.go, config.toml, and server/server.go, server/routes/*
 
@@ -90,7 +88,8 @@ For production, I recommend using supervisorctl to keep the binary running, and 
 
 Good luck!
 
- # Contribute
+
+### Contribute
  
  If you can pretty things up with your style of coding, please do so and pull request :)
  
