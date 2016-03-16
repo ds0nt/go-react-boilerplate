@@ -26,7 +26,10 @@ cd $GOPATH/src/my_project_name
 Because go uses the src/ folder structure to include packages, find-replace *.go files "ds0nt.com" with "my_project_name".
 
 Once you've done that...
- 
+
+
+### Server build steps
+
 ```bash
 # install dependency packages
 go get
@@ -38,9 +41,8 @@ go build
 ./my_project_name
 ```
 
-# Usage
 
-Building the client. Have npm and nodejs installed.
+# Client build steps
 
 ```bash
 cd client
