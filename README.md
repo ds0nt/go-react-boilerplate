@@ -2,6 +2,8 @@
 
 A boilerplate for Golang / React Single Page Web Apps. Golang is the backend api and file-server. Reactjs is used for ONLY client-side views. Axios is used for xhr requests.
 
+**Note: I use shell scripts. If you use windows, you'll have to write your own client/build.sh**
+
 
 ### Installation
 
@@ -50,6 +52,8 @@ cd client
 
 # get the front-end dependencies
 npm install
+
+sudo npm install -g watchman browserify myth 
 
 # continually watch the clients css, js, and copy assets and build when changed
 ./build.sh
