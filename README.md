@@ -4,8 +4,37 @@ A boilerplate for API driven single-page web applications with a react.js front-
 
 # Installation
 
- - Clone the repository into a folder like ```/mygopath/src/projectname```
- - Because the boilerplate was made for ```/mygopath/src/ds0nt.com``` you need to ctrl+f and replace all 'ds0nt.com's with 'projectname'
+Install golang. Setup your $GOPATH
+
+```bash
+# for example, add this to your .bashrc
+export GOPATH="/home/MYUSER/go"
+
+# then source it
+. ~/.bashrc
+```
+
+```bash
+# create the gopath if you havn't already :p
+mkdir -p $GOPATH/src
+
+# clone
+git clone https://github.com/ds0nt/go-react-boilerplate $GOPATH/src/my_project_name
+
+cd $GOPATH/src/my_project_name
+```
+Now find-replace *.go files "ds0nt.com" with "my_project_name"
+ 
+```bash
+# install required packages
+go get
+
+# compile source into a binary
+go build
+
+# execute said binary (start the server)
+./my_project_name
+```
 
 # Usage
 
@@ -22,17 +51,12 @@ npm install
 
 ```
 
-Running the server
 
-```bash
-go build .
-./myproject
-```
+# Development 
 
+### This is a bunch of useless babble, you can just look at the code and it's pretty freaking obvious what does what.
 
-# Development
-
-It's pretty straightforward. Mess around with the client/src/app.js, client/styles/app.css, and with config.go, config.toml, and server/server.go, server/routes/*
+Mess around with the client/src/app.js, client/styles/app.css, and with config.go, config.toml, and server/server.go, server/routes/*
 
 The client uses browserify to bundle up all of the application files into a single app.js. Similarily it uses myth to auto-prefix the css, and bundle it up into a single app.css file. This will happen automatically if you are running the ./build.sh file.
 
