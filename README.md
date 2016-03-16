@@ -56,7 +56,7 @@ npm install
 ```
 
 
-# Notes on how it works.
+### Notes on the code.
 
 Mess around with the client/src/app.js, client/styles/app.css, and with config.go, config.toml, and server/server.go, server/routes/*
 
