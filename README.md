@@ -23,10 +23,12 @@ git clone https://github.com/ds0nt/go-react-boilerplate $GOPATH/src/my_project_n
 
 cd $GOPATH/src/my_project_name
 ```
-Now find-replace *.go files "ds0nt.com" with "my_project_name"
+Because go uses the src/ folder structure to include packages, find-replace *.go files "ds0nt.com" with "my_project_name".
+
+Once you've done that...
  
 ```bash
-# install required packages
+# install dependency packages
 go get
 
 # compile source into a binary
