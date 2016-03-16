@@ -1,8 +1,9 @@
 # go-react-boilerplate
 
-A boilerplate for API driven single-page web applications with a react.js front-end
+A boilerplate for Golang / React Single Page Web Apps. Golang is the backend api and file-server. Reactjs is used for ONLY client-side views. Axios is used for xhr requests.
 
-# Installation
+
+### Installation
 
 Install golang. Setup your $GOPATH
 
