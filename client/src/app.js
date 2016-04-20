@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get(apiPath('/apps'))
+    axios.get(API_URL + '/apps')
       .then(res => this.setState({ apps: res.data }))
       .catch(err => console.error(err))
   }
@@ -23,8 +23,17 @@ class App extends Component {
 
     return (
       <div>
-        <h1>Golang React Boilerplate</h1>
-        { JSON.stringify(this.state.apps) }
+        <h1>Go React Boilerplate</h1>
+        <p>
+          To build the production version of the client try: <br/>
+          <b>NODE_ENV=production ./build.sh </b> <br/><br/>
+          see build.sh for details
+        </p>
+        <h3>Apps</h3>
+        <a href={API_URL + "/apps"}>GET /apps</a>
+        <pre>
+          { JSON.stringify(this.state.apps, false, 4) }
+        </pre>
       </div>
     )
   }

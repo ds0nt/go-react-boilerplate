@@ -1,4 +1,4 @@
-package config
+package main
 
 import (
 	log "github.com/Sirupsen/logrus"
@@ -16,11 +16,13 @@ type Settings struct {
 	IndexTarget    string `toml:"index_target"`
 }
 
-var All Settings
+var config Settings
 
-func Load(configFile string) {
-	_, err := toml.DecodeFile(configFile, &All)
+func loadConfig(configFile string) error {
+	_, err := toml.DecodeFile(configFile, &config)
 	if err != nil {
 		log.Fatal("Error loading config file")
+		return err
 	}
+	return nil
 }

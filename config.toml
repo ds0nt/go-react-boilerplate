@@ -1,8 +1,4 @@
-protocol = "http://"
-hostname = "localhost"
-fileserver_port = ":4000"
-api_port = ":4001"
+fileserver_port = ":8081"
+api_port = ":8080"
 
 webroot = "client/dist"
-index_template = "client/index.html"
-index_target = "client/dist/index.html"

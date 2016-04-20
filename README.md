@@ -18,22 +18,12 @@ export GOPATH="/home/MYUSER/go"
 ```
 
 ```bash
-# create the gopath if you havn't already :p
-mkdir -p $GOPATH/src
 
 # clone
 git clone https://github.com/ds0nt/go-react-boilerplate $GOPATH/src/my_project_name
 
 cd $GOPATH/src/my_project_name
-```
-Because go uses the src/ folder structure to include packages, find-replace *.go files "ds0nt.com" with "my_project_name".
 
-Once you've done that...
-
-
-### Server build steps
-
-```bash
 # install dependency packages
 go get
 
@@ -53,32 +43,37 @@ cd client
 # get the front-end dependencies
 npm install
 
-sudo npm install -g watchman browserify myth 
+sudo npm install -g watchman browserify myth
 
 # continually watch the clients css, js, and copy assets and build when changed
 ./build.sh
+
+# build minified production version of the code.
+# also, this will copy index.prod.html instead of index.html
+NODE_ENV=production ./build.sh
 
 ```
 
 
 ### Notes on the code.
 
-Mess around with the client/src/app.js, client/styles/app.css, and with config.go, config.toml, and server/server.go, server/routes/*
+The server reads the config.toml file, then sets up a file-server and api-server accordingly. Just have a look at main.go. I left it all compacted into one file, so that you have the freedom to split it into files the way you want it to. You will also want to connect your own backend.
+
+**Backend Recommendations**
+
+ - [BoltDB](https://github.com/boltdb/bolt): is embedded, meaning that you don't actually have to install it. Great for tiny single-server apps. It's similar to redis.
+ - [Mongo](http://labix.org/mgo): jf you want a document store.
+ - [Redis](https://github.com/garyburd/redigo): if you want a key/value store.
+ - [GORM](http://jinzhu.me/gorm/): if you want a relational database.
+
+
+Mess around with the client/src/app.js, client/styles/app.css, client/public/index.html and client/public/index.prod.html
 
 The client uses browserify to bundle up all of the application files into a single app.js. Similarily it uses myth to auto-prefix the css, and bundle it up into a single app.css file. This will happen automatically if you are running the ./build.sh file.
 
-For the server, it first reads the config.toml file, then it will run client/render.go which will render out an index.html file with our configuration loaded in. This is a nice way to pass in the correct API Ports etc.
-
-To add more routes, you can look at the /server/routes/apps.go. Its nice and simple and boring.
-
-I do recommend using well structured responses, and I will add more examples soon!
-
-```
-GET http://localhost:4001/apps
-```
 
 The client will use axios to make ajax requests. You might see that it uses a function apiPath(). This originates from the index.html file that is quickly rendered by the server with configuration before running.
- 
+
 The server api uses http://github.com/ant0ine/go-json-rest/rest, which is a thin layer around the standard "net/http" to provide nice json API functionality, and also has some nice middlewares.
 
 Also, when running the server, you can do this:
@@ -89,14 +84,12 @@ Also, when running the server, you can do this:
 
 Which is a nice way to have multiple configurations.
 
-For production, I recommend using supervisorctl to keep the binary running, and to pipe the logs into somewhere like: /var/log/project.err.log and /var/log/project.log
+For production, I recommend using supervisorctl or systemd to keep the binary running, and to pipe the logs into somewhere like: /var/log/project.err.log and /var/log/project.log
 
 Good luck!
 
-
 ### Contribute
- 
- If you can pretty things up with your style of coding, please do so and pull request :)
- 
- Cheers guys
 
+ If you can pretty things up with your style of coding, please do so and pull request :)
+
+ Cheers guys
