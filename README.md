@@ -7,19 +7,8 @@ A boilerplate for Golang / React Single Page Web Apps. Golang is the backend api
 
 ### Installation
 
-Install golang. Setup your $GOPATH
-
-```bash
-# for example, add this to your .bashrc
-export GOPATH="/home/MYUSER/go"
-
-# then source it
-. ~/.bashrc
 ```
-
-```bash
-
-# clone
+# clone into your gopath
 git clone https://github.com/ds0nt/go-react-boilerplate $GOPATH/src/my_project_name
 
 cd $GOPATH/src/my_project_name
