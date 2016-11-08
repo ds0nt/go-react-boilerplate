@@ -1,5 +1,3 @@
-!img[https://codeship.com/projects/158054/status?branch=master]
-
 # go-react-boilerplate
 
 A boilerplate for Golang / React Single Page Web Apps. Golang is the backend api and file-server. Reactjs is used for ONLY client-side views. Axios is used for xhr requests.
@@ -53,7 +51,7 @@ The server reads the config.toml file, then sets up a file-server and api-server
 **Backend Recommendations**
 
  - [BoltDB](https://github.com/boltdb/bolt): is embedded, meaning that you don't actually have to install it. Great for tiny single-server apps. It's similar to redis.
- - [Mongo](http://labix.org/mgo): jf you want a document store.
+ - [Mongo](http://labix.org/mgo): if you want a document store.
  - [Redis](https://github.com/garyburd/redigo): if you want a key/value store.
  - [GORM](http://jinzhu.me/gorm/): if you want a relational database.
 
